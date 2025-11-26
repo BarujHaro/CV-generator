@@ -1,4 +1,6 @@
 import React, { useState, useEffect  } from 'react'
+import { CirclePlus } from 'lucide-react';
+import { Trash } from 'lucide-react';
 
 const Experience = ({ data, onChange }) => {
  
@@ -40,13 +42,15 @@ const Experience = ({ data, onChange }) => {
 
   return (
     <div>
-     <h2>Experience</h2>
-      <form>
 
+      <form>
+        <h2 className="form-title">Experience</h2>
         {jobs.map((job, index) => (
-          <div key={index}>
-              <label>
+          <div  className="form-control" key={index}>
+            <div  >
+              <label className="form-label">
               Company name
+              </label>
               <input
                 type='text'
                 placeholder='company'
@@ -54,78 +58,95 @@ const Experience = ({ data, onChange }) => {
                 onChange={(e) => 
                   handleJobsChange(index, "company", e.target.value)
                 }
-                
+                className="form-input"
               />
-            </label>
+            
+            </div>
 
 
-            <label>
-              Position
-              <input
-                type='text'
-                placeholder='position'
-                value={job.position ?? ""}
-                onChange={(e) => 
-                  handleJobsChange(index, "position", e.target.value)
-                }
-                
-              />
-            </label>
+            <div>
+              <label className="form-label">
+                Position
+              </label>
+                <input
+                  type='text'
+                  placeholder='position'
+                  value={job.position ?? ""}
+                  onChange={(e) => 
+                    handleJobsChange(index, "position", e.target.value)
+                  }
+                  className="form-input"
+                />
+            </div>
+
+            
+
+            <div>
+              <label className="form-label">
+                Responsabilities
+                </label>
+                <input
+                  type='text'
+                  placeholder='responsabilities'
+                  value={job.responsability ?? ""}
+                  onChange={(e) => 
+                    handleJobsChange(index, "responsability", e.target.value)
+                  }
+                  className="form-input"
+                />
+            </div>
+
+            
 
 
-            <label>
-              Responsabilities
-              <input
-                type='text'
-                placeholder='responsabilities'
-                value={job.responsability ?? ""}
-                onChange={(e) => 
-                  handleJobsChange(index, "responsability", e.target.value)
-                }
-                
-              />
-            </label>
+            <div>
+              <label className="form-label">
+                Start date
+              </label>
+                <input
+                  type='date'
+                  value={job.start ?? ""}
+                  onChange={(e) => 
+                    handleJobsChange(index, "start", e.target.value)
+                  }
+                  className="form-input"
+                />
+            </div>
 
-            <label>
-              Start date
-              <input
-                type='date'
-                value={job.start ?? ""}
-                onChange={(e) => 
-                  handleJobsChange(index, "start", e.target.value)
-                }
-                
-              />
-            </label>
-
-            <label>
-              Leave Date
-              <input
-                type='date'
-                value={job.end ?? ""}
-                onChange={(e) => 
-                  handleJobsChange(index, "end", e.target.value)
-                }
-                
-              />
-            </label>            
+            
 
 
-              <button
-                type='button'
-                onClick={() => removeJob(index)}
-                style={{ marginLeft: "8px", color: "red" }}
-              >
-                Remove
+            <div >
+              <label className="form-label">
+                Leave Date
+              </label> 
+                <input
+                  type='date'
+                  value={job.end ?? ""}
+                  onChange={(e) => 
+                    handleJobsChange(index, "end", e.target.value)
+                  }
+                  className="form-input"
+                />
+            </div>
+
+                       
+
+ 
+              <button type="button" onClick={() => removeJob(index)} className="icon-btn">
+                <Trash size={30}  color="var(--del)"/>
               </button>
 
 
           </div>
         ))}
+ 
+ 
+      <button type="button" onClick={addJob} className="icon-plus-btn">
+        <CirclePlus size={34}  color="var(--accent)"/>
+      </button>
 
-        <button type="button" onClick={addJob}>
-          Add
-        </button>
+
       </form>
     </div>
   )

@@ -1,16 +1,35 @@
-# React + Vite
+# CV Gnerator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CV Generator is a web application built with React that allows users to create their resumes interactively, visually, and with customizable features.
 
-Currently, two official plugins are available:
+The tool includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A section-based editor (General, Education, Experience, Skills, Certifications, etc.)
 
-## React Compiler
+Real-time CV preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Professional-style PDF export using @react-pdf/renderer
 
-## Expanding the ESLint configuration
+ATS-friendly template and clean design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Features
+
+-Data editor
+-Real-time preview
+-PDF Export
+
+
+## Technologies
+
+-React
+-React Hooks
+-CSS
+-Vite
+
+
+## Install
+
+Clone - git clone https://github.com/BarujHaro/CV-generator
+Install dependencies - npm install
+Run - npm run dev

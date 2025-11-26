@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { CirclePlus } from 'lucide-react';
+import { Trash } from 'lucide-react';
+
 
 const Skills = ({ data, onChange }) => {
  
@@ -34,29 +37,25 @@ const Skills = ({ data, onChange }) => {
 
   return (
     <div>
-      <h2>Skills</h2>
-      <form>
-        {skills.map((skill, index) => (
-          <div key={index}>
-            <label>
-              Skill name
 
+      <form>
+        <h2 className="form-title">Skills</h2>
+        {skills.map((skill, index) => (
+          <div className="form-control-del" key={index}>
               <input
                 type="text"
                 value={skill.name ?? ""}
-                placeholder="Skill"
+                placeholder="Skill name"
                 onChange={(e) =>
                   handleSkillChange(index, e.target.value)
                 }
+                className="form-input"
               />
-            </label>
+           
+ 
 
-              <button
-                type="button"
-                onClick={() => removeSkill(index)}
-                style={{ marginLeft: "8px", color: "red" }}
-              >
-                Remove
+              <button type="button" onClick={() => removeSkill(index)} className="icon-btn">
+                <Trash size={30}  color="var(--del)"/>
               </button>
           </div>
 
@@ -64,9 +63,9 @@ const Skills = ({ data, onChange }) => {
 
         ))}
 
-
-        <button type="button" onClick={addSkill}>
-          Add
+    
+        <button type="button" onClick={addSkill} className="icon-plus-btn">
+          <CirclePlus size={34}  color="var(--accent)"/>
         </button>
       </form>
     </div>

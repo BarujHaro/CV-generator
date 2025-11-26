@@ -1,0 +1,92 @@
+.preview{
+    background-color: var(--bg-lighter);
+    padding: 1.5rem 2rem;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    box-shadow: -2px 8px 13px 3px rgba(0,0,0,0.19);
+    -webkit-box-shadow: -2px 8px 13px 3px rgba(0,0,0,0.19);
+    -moz-box-shadow: -2px 8px 13px 3px rgba(0,0,0,0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60%; 
+    max-width: 70%;
+}
+
+.preview-info > * {
+    margin: 0;          /* borra márgenes de títulos, divs, p, etc */
+    padding: 0;
+}
+
+.preview-info h2,
+.preview-info h3,
+.preview-info h4 {
+    margin-bottom: 0.3rem;  
+    text-align: center;
+}
+
+.info-contact{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-row {
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+.education-row p {
+    margin: 0;
+}
+
+.pre-edu{
+    font-weight: bold;
+}
+
+.ed-date {
+    text-align: right;
+    opacity: 0.7; 
+    font-size: 0.8rem;   
+}
+
+
+.my-job {
+  margin-bottom: 0.8rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;    
+}
+
+.job-header p {
+  margin: 0;
+}
+
+.company {
+  font-weight: bold;
+}
+
+.job-dates {
+  opacity: 0.7;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.job-position {
+  margin: 0.2rem 0 0;
+  font-weight: 500;
+}
+
+.job-resp {
+  margin: 0.1rem 0 0.6rem;
+  font-size: 0.9rem;
+}

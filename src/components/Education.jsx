@@ -1,6 +1,7 @@
-
-
 import React, { useState, useEffect} from 'react'
+import { CirclePlus } from 'lucide-react';
+import { Trash } from 'lucide-react';
+
 
 const Education = ({ data, onChange }) => {
 
@@ -59,47 +60,63 @@ const Education = ({ data, onChange }) => {
   return (
 <div>
 <form>
-      <h2>Education</h2>
-      <label>
-        school Name
-        <input
-          type='text'
-          name='school'
-          value={form.school ?? ""}
-          onChange={handleChange}
-          
-        />
-      </label>
-
-      <label>
-        Degree name
-        <input
-          type='text'
-          name='degree'
-          value={form.degree ?? ""}
-          onChange={handleChange}
-          
-        />
-      </label>
-
-      <label>
-        Graduation date
-        <input
-          type='date'
-          name='graduated'
-          value={form.graduated ?? ""}
-          onChange={handleChange}
-          
-        />
-      </label>
+      <h2 className="form-title">Education</h2>
+      <div className="form-control">
+      <div >
+        <label className="form-label">
+          school Name
+        </label>
+          <input
+            type='text'
+            name='school'
+            value={form.school ?? ""}
+            onChange={handleChange}
+            className="form-input"
+          />
+      </div>
 
 
-      <h3>Certifications</h3>
+      <div >
+        <label className="form-label">
+          Degree name
+        </label>
+          <input
+            type='text'
+            name='degree'
+            value={form.degree ?? ""}
+            onChange={handleChange}
+            className="form-input"
+          />
+      </div>
+
+      
+
+      <div  >
+        <label className="form-label">
+          Graduation date
+        </label>
+          <input
+            type='date'
+            name='graduated'
+            value={form.graduated ?? ""}
+            onChange={handleChange}
+            className="form-input"
+          />
+      </div>
+
+
+
+
+      </div>
+
+
+
+
+      <h3 className="form-title">Certifications</h3>
 
       {certifications.map((cert, index) => (
-        <div key={index}>
-          <label>
-            Certificate
+      
+          <div className="form-control-del" key={index}>
             <input
               type="text"
               value={cert.name ?? ""}
@@ -107,24 +124,24 @@ const Education = ({ data, onChange }) => {
               onChange={(e) =>
                 handleCertificationChange(index, e.target.value)
               }
+              className="form-input"
             />
-          </label>
-            <button
-              type="button"
-              onClick={() => removeCertification(index)}
-              style={{ marginLeft: "8px", color: "red" }}
-            >
-              Remove
+
+            <button type="button" onClick={() => removeCertification(index)} className="icon-btn">
+              <Trash size={30}  color="var(--del)"/>
             </button>
-        </div>
+          </div>
+
+ 
 
 
       ))}
 
 
+    
 
-      <button type="button" onClick={addCertification}>
-        Add
+      <button type="button" onClick={addCertification} className="icon-plus-btn">
+        <CirclePlus size={34}  color="var(--accent)"/>
       </button>
     </form>
 

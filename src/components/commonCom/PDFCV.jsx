@@ -15,9 +15,9 @@ const FONT_SIZES = {
   text: 14
 };
 const MB_SIZES = {
-  sec: 16,
-  big: 10,
-  med: 6
+  sec: 28,
+  big: 12,
+  med: 8
 };
 // Crear estilos
 const styles = StyleSheet.create({

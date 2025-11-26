@@ -1,3 +1,27 @@
-* {
-    background-color: rgb(158, 158, 158);
+@import "./styles/Btns.css";
+@import "./styles/forms.css";
+@import "./styles/build.css";
+@import "./styles/preview.css";
+
+:root {
+    --bg-main:  #ccd7e3;
+    --bg-soft: #e3e8ef; 
+    --bg-lighter: #f5f9ff; 
+
+    --accent: #1E4E8C; 
+    --accent-light: #3C6DA7;
+    --accent-lighter: #5589c9;
+
+    --del: #c9555d;
+    
+    --text-main: #1C1E21;
+    --text-subtle: #5A5A5A;
+    --font-main: "Inter", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+    font-family: var(--font-main);
 }

@@ -5,24 +5,28 @@ const Preview = ({data}) => {
 
 
   return (
-    <div>
+    <div className='preview-info'>
         <h2>Preview</h2>
         {data.general.name ? (
             <h3>{data.general.name}</h3>
         ):(
             <h3>Name</h3>
         )}
+
         {data.general.position && <div><h4>{data.general.position}</h4></div>}
-        {data.general.email && <div><p>{data.general.email}</p></div>}
-        {data.general.number && <div><p>{data.general.number}</p></div>}
-        {data.general.linkedin && <div><p>{data.general.linkedin}</p></div>}
+  
+        <div className='info-contact'>
+          {data.general.email && <div><p>{data.general.email}</p></div>}
+          {data.general.number && <div><p>{data.general.number}</p></div>}
+          {data.general.linkedin && <div><p>{data.general.linkedin}</p></div>}
+        </div>
         {data.general.summary && <div><p>{data.general.summary}</p></div>}
-   
+    
         <h3>Education</h3>
 
-         <div>
-          {data.education.school && <div><p>{data.education.school}</p></div>}
-          {data.education.graduated && <div><p>{data.education.graduated}</p></div>}
+         <div className="education-row">
+          {data.education.school && <div className='pre-edu'><p>{data.education.school}</p></div>}
+          {data.education.graduated && <div className='ed-date'><p>{data.education.graduated}</p></div>}
          </div>
           {data.education.degree && <div><p>{data.education.degree}</p></div>}
           {data.education.certifications &&
@@ -44,12 +48,14 @@ const Preview = ({data}) => {
             <div>
            
                 {data.experience.jobs.map((job, index) => (
-                  <div key={index}>
-                    <li>{job.company}</li>
-                    <li>{job.start}</li>
-                    <li>{job.end}</li>
-                    <li>{job.position}</li>
-                    <li>{job.responsability}</li>
+                  <div key={index} className="my-job">
+                    <div className="job-header">
+                      <p className="company">{job.company}</p>
+                      <p className="job-dates">{job.start} — {job.end}</p>
+                    </div>
+
+                    <p className="job-position">{job.position}</p>
+                    <p className="job-resp">{job.responsability}</p>
                   </div>
 
                   

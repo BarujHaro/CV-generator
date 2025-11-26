@@ -1,0 +1,18 @@
+.build-view{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.my-jobs li {
+  list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .build-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 2rem;
+    }
+}

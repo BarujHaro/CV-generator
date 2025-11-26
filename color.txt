@@ -1,0 +1,6 @@
+#F1EFEC   //fondo
+#D4C9BE   //tarjetas
+#123458   //Titulos
+#030303   //Todo
+3333333
+ #F1EFEC
